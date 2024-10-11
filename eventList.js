@@ -10,25 +10,4 @@ btn.addEventListener("click", function (event) {
   } else {
     btn.textContent = "Показать всё";
   }
-
-  console.log("click");
 });
-
-function toggleFourthItem() {
-  const fourthItem = document.querySelector(
-    ".brand__type .swiper-slide:nth-child(4)",
-  );
-  const mediaQuery = window.matchMedia(
-    "(min-width: 768px) and (max-width: 1119px)",
-  );
-
-  if (mediaQuery.matches) {
-    fourthItem.style.display = "none";
-  } else {
-    fourthItem.style.display = "";
-  }
-}
-
-toggleFourthItem();
-
-window.addEventListener("resize", toggleFourthItem);

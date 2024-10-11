@@ -36,28 +36,10 @@ const swiper = new Swiper(".swiper", {
   scrollbar: {
     el: ".swiper-scrollbar",
   },
-
-  on: {
-    init: () => {
-      updateBulletsColor();
-    },
-    slideChange: () => {
-      updateBulletsColor();
-    },
-    resize: () => {
-      updateBulletsColor();
-    },
-  },
 });
 
-function updateBulletsColor() {
-  const bullets = document.querySelectorAll(".swiper-pagination-bullet");
-  bullets.forEach((bullet) => {
-    bullet.style.backgroundColor = "#B5B6BC";
-  });
-}
-
 function handleSwiperOnResize() {
+  console.log("resize");
   if (window.innerWidth >= 768) {
     swiper.disable();
   } else {

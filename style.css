@@ -20,7 +20,7 @@ ul {
 }
 .brand {
   overflow: hidden;
-  height: 200px;
+  height: 170px;
 }
 .brand-open {
   height: 460px;
@@ -49,7 +49,9 @@ ul {
   width: 200px;
   height: 120px;
 }
-
+.swiper-pagination-bullet {
+  background: #b5b6bc;
+}
 .brand__controls {
   display: flex;
   justify-content: flex-start;
@@ -68,16 +70,16 @@ ul {
   border: none;
 }
 
-@media (min-width: 768px) and (max-width: 1119px) {
+@media (768px <= width <= 1119px) {
   .brand__type {
     display: grid;
     grid-template-columns: 250px 250px 250px;
     grid-gap: 5px;
-    row-gap: 0;
+    row-gap: 16px;
     margin-left: 10px;
   }
 }
-@media (min-width: 0px) and (max-width: 767px) {
+@media (0px <= width <= 767px) {
   .brand__controls {
     display: none;
   }
@@ -86,16 +88,25 @@ ul {
   }
 }
 
-@media (min-width: 1120px) and (max-width: 2440px) {
+@media (1120px <= width <= 2240px) {
   .brand__type {
     display: grid;
     grid-template-columns: 250px 250px 250px 250px;
     grid-gap: 5px;
-
     margin-left: 10px;
-    row-gap: 0;
+    row-gap: 16px;
   }
   .brand-open {
     height: 320px;
+  }
+}
+
+@media (width >= 768px) {
+  .swiper-slide {
+    width: 200px;
+    height: unset;
+  }
+  .brand-open {
+    height: unset;
   }
 }
